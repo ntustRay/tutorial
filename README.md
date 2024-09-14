@@ -1,12 +1,23 @@
 ## Node Version
 
-The minimum Node.js version has been bumped from 16.14 to 18.17, since 16.x has reached end-of-life.
+The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x has reached end-of-life.
 
 ## Create Next App
 
 ```sh
 npx create-next-app@latest appName
 ```
+
+## Next.JS install init settings
+```sh
+Would you like to use TypeScript? Yes
+Would you like to use ESLint? Yes
+Would you like to use Tailwind CSS? Yes
+Would you like to use `src/` directory? ... No 
+Would you like to use App Router? (recommended)  Yes
+Would you like to customize the default import alias (@/*)?... No
+```
+
 
 ## Folder Structure
 
