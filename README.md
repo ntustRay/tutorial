@@ -2,6 +2,16 @@
 
 The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x has reached end-of-life.
 
+---
+
+### Keep going on learning
+
+``Section 2:Next.js Tutorial 10.CSS``  
+
+**🏆 9 of 173 complete.**
+
+---
+
 ## Create Next App
 
 ```sh
