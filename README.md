@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial 10.CSS``  
+``Section 2:Next.js Tutorial`` **13. Navbar Component**  
 
-**🏆 9 of 173 complete.**
+**🏆 13 of 173 complete.**
 
 ---
 
