@@ -6,9 +6,17 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **16. Server vs Client**  
+``Section 2:Next.js Tutorial`` **18. Fetch Data**  
 
-**🏆 16 of 173 complete.**
+**🏆 18 of 173 complete.**
+
+#### Key notes:
+
+- Server Components vs Client Components
+  - use the "use client" directive
+- Fetch data in Server Components
+  - async function  
+  - async client function will occur an error  
 
 ---
 
