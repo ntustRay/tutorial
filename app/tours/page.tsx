@@ -1,6 +1,7 @@
 import React from 'react';
 
 const url = 'https://www.course-api.com/react-tours-project';
+const wrongUrl = 'https://www.course-api.com/react-tours-project-wrong';
 
 type Tour = {
   id: string;
@@ -10,10 +11,16 @@ type Tour = {
   price: string;
 };
 
+const fetchTours = async () => { 
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  const response = await fetch(wrongUrl);
+  const data: Tour[] = await response.json();
+  return data;
+};
+
 
 const ToursPage = async () => {
-  const response = await fetch(url);
-  const data: Tour[] = await response.json();
+  const data = await fetchTours();
   // console.log(data);
   return (
     <section>

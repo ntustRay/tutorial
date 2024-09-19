@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **18. Fetch Data**  
+``Section 2:Next.js Tutorial`` **21. Error Component**  
 
-**🏆 18 of 173 complete.**
+**🏆 21 of 173 complete.**
 
 #### Key notes:
 
@@ -17,6 +17,10 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 - Fetch data in Server Components
   - async function  
   - async client function will occur an error  
+- Components in Next.js
+  - In app folder create a folder with the page.js file will automatically create a route
+  - Error Component will automatically catch the error
+  - Loading Component will automatically show the loading state when fetching data
 
 ---
 
