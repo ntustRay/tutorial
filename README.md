@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **21. Error Component**  
+``Section 2:Next.js Tutorial`` **23. Dynamic Page**  
 
-**🏆 21 of 173 complete.**
+**🏆 23 of 173 complete.**
 
 #### Key notes:
 
@@ -21,6 +21,8 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - In app folder create a folder with the page.js file will automatically create a route
   - Error Component will automatically catch the error
   - Loading Component will automatically show the loading state when fetching data
+  - Dyname routes
+    - [id] - Dynamic route
 
 ---
 
