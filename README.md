@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **23. Dynamic Page**  
+``Section 2:Next.js Tutorial`` **26. Responsive Images**  
 
-**🏆 23 of 173 complete.**
+**🏆 26 of 173 complete.**
 
 #### Key notes:
 
@@ -23,6 +23,17 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - Loading Component will automatically show the loading state when fetching data
   - Dyname routes
     - [id] - Dynamic route
+- Image (24/9/22)
+  - Use Next.js Image component instead of img tag
+  - Image component features
+    - Size Optimization
+    - Visual Stability
+    - Faster Page Loads
+    - Asset Flexibility
+  - prevent URL from XSS attacks
+  - Need to set up next.config.mjs
+      - remotePatterns
+        - protocol, hostname, port, pathname
 
 ---
 
