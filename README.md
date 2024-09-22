@@ -78,6 +78,13 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
       > mapping to /auth/sign-in/params  
       > mapping to /auth/sign-in/params/params  
       > can be matched the **/auth**
+- Server Actions (24/9/22)
+  - Need to set next.config.mjs
+    - experimental
+      - serverActions
+      - allowedOrigins
+        - hostname, port
+  - set allowOrigins to  avoid CORS attacks
 
 ---
 
