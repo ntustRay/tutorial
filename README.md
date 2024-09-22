@@ -14,6 +14,29 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 - Server Components vs Client Components
   - use the "use client" directive
+  - use the "use server" in the function body
+    - only in React Server Components
+    - example: 
+    ```tsx
+    export default function ServerComponent() {
+      async function myAction(formData) {
+        'use server';
+      }
+      return <form action={myAction}>...</form>;
+    }
+    ```
+  - use client components with server functions
+    - example:
+    ```tsx
+    import { myAction } from './actions';
+    export default function ClientComponent() {
+      return (
+        <form action={myAction}>
+          <button type='submit'>Add to Cart</button>
+        </form>
+      );
+    }
+    ```
 - Fetch data in Server Components
   - async function  
   - async client function will occur an error  
@@ -34,6 +57,27 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - Need to set up next.config.mjs
       - remotePatterns
         - protocol, hostname, port, pathname
+- Dynamic Routes (24/9/22)
+  - Route Groups => (dashboard)
+  - Private Folders => _folder
+  - Dynamic Routes
+    - [folder] - Catch-all route segment
+    - [...folder] - Catch-all route segment
+    - [[...folder]] Optional catch-all
+    - example: 
+      - create app/(dashboard)/auth/[sign-in]
+      > mapping to /auth/sign-in  
+      - create app/(dashboard)/auth/[...sign-in]
+      > mapping to /auth/sign-in  
+      > mapping to /auth/sign-in/params  
+      > mapping to /auth/sign-in/params/params  
+      > must be matched the **/auth/sign-in**  
+      - create app/(dashboard)/auth/[[...sign-in]]
+      > mapping to /auth  
+      > mapping to /auth/sign-in  
+      > mapping to /auth/sign-in/params  
+      > mapping to /auth/sign-in/params/params  
+      > can be matched the **/auth**
 
 ---
 
