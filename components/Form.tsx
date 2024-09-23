@@ -1,9 +1,7 @@
-import React from 'react';
+'use client';
 
-const createUser = async () => {
-  'use server';
-  console.log('create user...');
-}
+import React from 'react';
+import {createUser} from '@/utils/action';
 
 const Form = () => {
   return (

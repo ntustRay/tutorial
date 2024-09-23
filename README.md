@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **26. Responsive Images**  
+``Section 2:Next.js Tutorial`` **33. Revalidate Cache and Redirect**  
 
-**🏆 26 of 173 complete.**
+**🏆 33 of 173 complete.**
 
 #### Key notes:
 
@@ -46,7 +46,7 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - Loading Component will automatically show the loading state when fetching data
   - Dyname routes
     - [id] - Dynamic route
-- Image (24/9/22)
+- Image **(24/9/22)**
   - Use Next.js Image component instead of img tag
   - Image component features
     - Size Optimization
@@ -57,7 +57,7 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - Need to set up next.config.mjs
       - remotePatterns
         - protocol, hostname, port, pathname
-- Dynamic Routes (24/9/22)
+- Dynamic Routes **(24/9/22)**
   - Route Groups => (dashboard)
   - Private Folders => _folder
   - Dynamic Routes
@@ -78,13 +78,25 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
       > mapping to /auth/sign-in/params  
       > mapping to /auth/sign-in/params/params  
       > can be matched the **/auth**
-- Server Actions (24/9/22)
+- Server Actions **(24/9/22)**
   - Need to set next.config.mjs
     - experimental
       - serverActions
       - allowedOrigins
         - hostname, port
   - set allowOrigins to  avoid CORS attacks
+- Action Files **(24/9/24)**
+  - create a file with the actions
+  - UI componets use the actions and 'use client'
+  - Server components use the actions and 'use server'
+  - FormData is a File object received from the form
+    - FormData.get() to get the value
+    - The value will get by **input name attribute**
+  - After the action, web page doesn't update data
+    - use revalidatePath() to update the data
+    - use redirect() to redirect to another page
+    - The revalidatePath() will generate a new static page like ISR
+    - The redirect() will redirect to another page and send a 302 status code then the browser will redirect to the new page and generate a new static page
 
 ---
 
