@@ -2,10 +2,22 @@
 
 import React from 'react';
 import {createUser} from '@/utils/action';
+import {useFormState, useFormStatus} from 'react-dom';
+
+const SubmitButton = () => {
+  const {pending} = useFormStatus();
+  return (
+    <button className={buttonStyle} type='submit' disabled={pending}>
+      {pending ? 'Submitting...' : 'Submit'}
+    </button>
+  );
+}
 
 const Form = () => {
+  const [message, formAction] = useFormState(createUser, null)
   return (
-    <form action={createUser} className={formStyle}>
+    <form action={formAction} className={formStyle}>
+      {message && <p className='text-red-500'>{message}</p>}
       <h2 className='text-2xl capitalize mb-4'>Form</h2>
       <input
         className={inputStyle}
@@ -21,7 +33,7 @@ const Form = () => {
         defaultValue={'smith'}
         required
       />
-      <button className={buttonStyle} type='submit'>Submit</button>
+      <SubmitButton />
     </form>
   );
 }

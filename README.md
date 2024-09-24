@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **33. Revalidate Cache and Redirect**  
+``Section 2:Next.js Tutorial`` **Play 35. UseFormState Hook**  
 
-**🏆 33 of 173 complete.**
+**🏆 35 of 173 complete.**
 
 #### Key notes:
 
@@ -97,6 +97,11 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
     - use redirect() to redirect to another page
     - The revalidatePath() will generate a new static page like ISR
     - The redirect() will redirect to another page and send a 302 status code then the browser will redirect to the new page and generate a new static page
+  - Form using Hook native useFormStatus() and useFormState()
+    - useFormStatus() to get the status of the form
+      - status: pending is true and awaiting the action return
+    - useFormState() to update the state of the form
+      - will return the message of the result after the form action
 
 ---
 

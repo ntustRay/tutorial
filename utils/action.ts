@@ -9,20 +9,25 @@ type User = {
   lastname: string;
 }
 
-export const createUser = async (formData: FormData) => {
-  console.log('create user');
+export const createUser = async (prevState: any, formData: FormData) => {
+  console.log(prevState);
+  console.log('Creating user...');
   const firstname = formData.get('firstname') as string;
   const lastname = formData.get('lastname') as string;
   const newUser: User = {firstname, lastname, id: Date.now().toString()};
-  const rawData = Object.fromEntries(formData.entries());
-  await saveUser(newUser);
-  // revalidatePath('/actions');
-  redirect('/actions');
-  console.log(rawData)
-  console.log({firstname, lastname});
+  
+  try {
+    await saveUser(newUser);
+    revalidatePath('/actions');
+    return 'user created successfully...';
+  } catch (error) {
+    console.log(error);
+    return 'failed to create user...';
+  }
+
 }
 
-export const fetchUsers = async (): Prmoise<User[]> => {
+export const fetchUsers = async (): Promise<User[]> => {
   const result = await readFile('users.json', {encoding: 'utf-8'});
   const users = result ? JSON.parse(result) : [];
   return users;
