@@ -15,7 +15,7 @@ export const createUser = async (prevState: any, formData: FormData) => {
   const firstname = formData.get('firstname') as string;
   const lastname = formData.get('lastname') as string;
   const newUser: User = {firstname, lastname, id: Date.now().toString()};
-  
+
   try {
     await saveUser(newUser);
     revalidatePath('/actions');
@@ -38,3 +38,21 @@ export const saveUser = async (user: User) => {
   users.push(user);
   await writeFile('users.json', JSON.stringify(users, null, 2));
 }
+
+export const deleteUser = async (formData: FormData) => {
+  const id = formData.get('id') as string;
+  const users = await fetchUsers();
+  const updatedUsers = users.filter((user: User) => user.id !== id);
+  await writeFile('users.json', JSON.stringify(updatedUsers, null, 2));
+  revalidatePath('/actions');
+};
+export const removeUser = async (id: string, formData: FormData) => {
+  const name = formData.get('name') as string;
+  console.log(`Removing user with id: ${id} and name: ${name}`);
+
+  const users = await fetchUsers();
+  const updatedUsers = users.filter((user: User) => user.id !== id);
+  await writeFile('users.json', JSON.stringify(updatedUsers, null, 2));
+  revalidatePath('/actions');
+
+};

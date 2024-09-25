@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **Play 35. UseFormState Hook**  
+``Section 2:Next.js Tutorial`` **38. Bind Method**  
 
-**🏆 35 of 173 complete.**
+**🏆 38 of 173 complete.**
 
 #### Key notes:
 
@@ -102,6 +102,25 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
       - status: pending is true and awaiting the action return
     - useFormState() to update the state of the form
       - will return the message of the result after the form action
+- Delete User **(24/9/26)**
+  - create a delete action
+  - create a delete button component
+  - use the delete action in the delete button
+  - use the delete button in the users list
+  - use the delete action with the bind option
+    - bind option will bind the value to the function
+    ```tsx
+    const removeUserWithId = removeUser.bind(null, id);
+    ```
+    - use server mode to remove the user
+    ```tsx
+      const removeUserWithId = async (formData: FormData) => {
+        'use server';
+        await removeUser(id, formData);
+      };
+    ```
+    - form action will send formData to the function and function need to update the route
+  
 
 ---
 
