@@ -120,8 +120,11 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
       };
     ```
     - form action will send formData to the function and function need to update the route
+- Route Handlers **(24/9/26)**
+  - create a route like backend restful API
+    - create a folder with 'api' name in the app folder
+    - create a file with the route name
   
-
 ---
 
 ## Create Next App
