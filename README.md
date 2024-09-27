@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **38. Bind Method**  
+``Section 2:Next.js Tutorial`` **42. Route Handlers - POST**  
 
-**🏆 38 of 173 complete.**
+**🏆 42 of 173 complete.**
 
 #### Key notes:
 
@@ -124,6 +124,12 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
   - create a route like backend restful API
     - create a folder with 'api' name in the app folder
     - create a file with the route name
+  - create a Restful API **(24/9/28)**
+    - get params from the request
+    - handle the request and response
+    - can CRUD the data
+    - use Thunder Client to test the API
+    - learn get and post method
   
 ---
 

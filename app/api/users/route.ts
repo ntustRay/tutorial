@@ -1,6 +1,15 @@
 import {fetchUsers, saveUser} from "@/utils/action";
+import {NextRequest, NextResponse} from "next/server";
+export const GET = async (req: NextRequest) => {
+  console.log(req.url)
+  console.log(req.nextUrl.searchParams.get('id'))
+  const users = await fetchUsers();
+  return Response.json(users);
+}
 
-export const GET = async () => {
-  const user = await fetchUsers();
-  return Response.json({user});
+export const POST = async (req: NextRequest) => {
+  const user = await req.json();
+  const newUser = {...user, id: Date.now().toString()};
+  await saveUser(newUser);
+  return Response.json({msg: 'user created'});
 }
