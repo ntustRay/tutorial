@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **42. Route Handlers - POST**  
+``Section 2:Next.js Tutorial`` **45. Cache**  
 
-**🏆 42 of 173 complete.**
+**🏆 45 of 173 complete.**
 
 #### Key notes:
 
@@ -130,7 +130,13 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
     - can CRUD the data
     - use Thunder Client to test the API
     - learn get and post method
-  
+  - middleware **(24/9/30)**
+    - use middleware to handle the all requests
+    - use config then set the matcher to match the route
+- Caching
+  - the static page will be cached
+  - use revalidatePath() to update the static page
+
 ---
 
 ## Create Next App
