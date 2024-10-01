@@ -6,9 +6,9 @@ The minimum Node.js version has been bumped from ``16.14 to 18.17``, since 16.x 
 
 ### Keep going on learning
 
-``Section 2:Next.js Tutorial`` **45. Cache**  
+``Section 2:Next.js Tutorial`` **45. Cache ( all done about Section 2.)**
 
-**🏆 45 of 173 complete.**
+**🏆 45 of 45 (total 173) complete.**
 
 #### Key notes:
 
